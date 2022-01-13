@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Flexbox генератор. Наглядный редактор.</title>
+</head>
+<body>
+    <header>
+        Flexbox генератор.
+    </header>
+    <aside>
+        <div class="content">
+            <div class="title">Layers (слои)</div>
+            <div id="layers"></div>
+            <div id="properties">
+                <ul>
+                    <li><a href="#properties-css">CSS</a></li>
+                    <li><a href="#properties-html">HTML</a></li>
+                </ul>
+                <div id="properties-css"></div>
+                <div id="properties-html"></div>
+            </div>
+            <div class="footer-reserve"></div>
+        </div>
+    </aside>
+    <main>
+        <div class="content">
+            <div id="width_line"></div>
+            <div id="items"></div>
+            <div class="footer-reserve"></div>
+        </div>
+    </main>
+    <script>
+        function dom_loaded(){document && document.getElementsByTagName && document.getElementById && document.body && (clearInterval(timer), load_all())}function load_all(){for (i in data_styles){var e = document.createElement("link"); e.setAttribute("rel", "stylesheet"), e.setAttribute("property", "stylesheet"), e.setAttribute("media", "screen"), e.href = "css/" + data_styles[i] + ".css?id=" + 22, document.body.appendChild(e)}load_next(data_scripts)}function load_next(e){if (0 == e.length)return void init(); var t = document.createElement("script"); t.src = "js/" + e.shift() + ".js?id=" + 22, document.body.appendChild(t), /msie/.test(userAgent) && !/opera/.test(userAgent)?t.onreadystatechange = function(){"complete" == script.readyState && load_next(e)}:t.onload = function(){load_next(e)}}var data_scripts = ['flexgen'], data_styles = ['jquery-ui-tabs.min'], userAgent = navigator.userAgent.toLowerCase(), timer = setInterval(dom_loaded, 20), loaded_scripts = 0;
+    </script>
+
+</body>
+</html>

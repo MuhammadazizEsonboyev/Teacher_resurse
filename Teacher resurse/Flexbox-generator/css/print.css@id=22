@@ -1,0 +1,11 @@
+aside, *[data-frame], .pagination, .fixed_nav{display: none;}
+.serf{float: left; width: 250px; margin: 0 10px 10px 0;}
+a{color:inherit;}
+html, body{background: #fff;}
+#wrapper .left{float: none; margin-right: 0; width: 100%;}
+#wrapper .left:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+header{width: 270px;}
+header img{width: 50%;}
+header, nav{float: left;}
+nav{margin-right: 10px;}
+nav ul{padding-top: 15px;}
